@@ -127,7 +127,7 @@ export function Create() {
 
                             </InputWrapper>
 
-                            <label htmlsFor="ingredients"> Ingredientes </label>
+                            <label htmlFor="ingredients"> Ingredientes </label>
                             <InputWrapper>
                                 <SectionIngredients>
                                     {
@@ -141,7 +141,7 @@ export function Create() {
                                     }
 
                                     <NoteItem
-                                        isnew
+                                        isnew="true"
                                         placeholder="Adicionar"
                                         onChange={e => setNewIngredient(e.target.value)}
                                         value={newIngredient}

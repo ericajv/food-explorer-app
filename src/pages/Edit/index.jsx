@@ -1,4 +1,4 @@
-import { Container, Main, ButtonBack, Form, InputWrapper, TextArea, SectionIngredients, SendFormWithImage } from "./styles"
+import { Container, Main, ButtonBack, Form, InputWrapper, TextArea, SectionIngredients } from "./styles"
 
 import { Header } from "../../components/Header/"
 import { Footer } from "../../components/Footer/"
@@ -42,7 +42,7 @@ export function Edit() {
         const confirm = window.confirm("Deseja deletar a refeição?")
 
         if (confirm) {
-            await api.delete(`/meals/${data.id}`)
+            await api.delete(`/meals/${params.id}`)
             navigate("/")
         }
     }
@@ -163,7 +163,7 @@ export function Edit() {
 
                             </InputWrapper>
 
-                            <label htmlsFor="ingredients"> Ingredientes </label>
+                            <label htmlFor="ingredients"> Ingredientes </label>
                             <InputWrapper>
                                 <SectionIngredients>
                                     {
@@ -177,7 +177,7 @@ export function Edit() {
                                     }
 
                                     <NoteItem
-                                        isnew
+                                        isnew="true"
                                         placeholder="Adicionar"
                                         onChange={e => setNewIngredient(e.target.value)}
                                         value={newIngredient}

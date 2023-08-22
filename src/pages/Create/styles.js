@@ -21,6 +21,15 @@ export const Main = styled.main`
     flex-direction: column;
     padding: 2.4rem 12.3rem;
 
+    .saveButtonDiv {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .saveButton{
+            width: 18%;
+        }
+    }
+
 `;
 
 export const ButtonBack = styled.div`

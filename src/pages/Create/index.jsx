@@ -169,7 +169,7 @@ export function Create() {
                                 >
                                 </textarea>
                             </TextArea>
-                            <div className="editButton">
+                            <div className="saveButtonDiv">
                                 <Button
                                     className="saveButton"
                                     title="Salvar alterações"

@@ -37,7 +37,7 @@ export const Slider = styled.div`
     > div {
         display: flex;
         gap: 2.7rem;
-        overflow-x: auto;
+        overflow: hiden;
         scroll-behavior: smooth;
         ::-webkit-scrollbar {
             display: none;

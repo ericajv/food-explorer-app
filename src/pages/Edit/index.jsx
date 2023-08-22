@@ -74,9 +74,13 @@ export function Edit() {
 
         await api.patch(`/meals/${params.id}`, { name, description, value, category_name: category, ingredients })
 
-        const { data } = await api.get(`/meals/${params.id}`)
+        const response = await api.get(`/meals/${params.id}`)
 
-        if (image != data.image) {
+        if (response.status == 401) {
+            navigate("/login")
+        }
+
+        if (image != response.data.image) {
             const formData = new FormData()
             formData.append("image", image)
             await api.patch(`/meals/${params.id}/image`, formData)
@@ -89,6 +93,10 @@ export function Edit() {
     useEffect(() => {
         async function fetchMeal() {
             const response = await api.get(`/meals/${params.id}`)
+
+            if (response.status == 401) {
+                navigate("/login")
+            }
 
             const { name, description, category_name, value, ingredients, image } = response.data
 

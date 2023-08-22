@@ -59,6 +59,11 @@ export function Create() {
         }
 
         const response = await api.post("/meals", { name, description, value, category_name: category, ingredients })
+
+        if (response.status == 401) {
+            navigate("/login")
+        }
+
         const mealId = response.data.id
 
         const formData = new FormData()

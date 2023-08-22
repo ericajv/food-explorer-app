@@ -38,6 +38,11 @@ export function Details() {
     useEffect(() => {
         async function fetchMeal() {
             const response = await api.get(`/meals/${params.id}`)
+
+            if (response.status == 401) {
+                navigate("/login")
+            }
+
             setData(response.data)
         }
 

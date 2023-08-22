@@ -17,6 +17,11 @@ export function Home() {
     useEffect(() => {
         async function fetchMeals() {
             const response = await api.get(`/meals?search=${search}`)
+
+            if (response.status == 401) {
+                navigate("/login")
+            }
+
             setMeals(response.data)
         }
 
@@ -42,7 +47,7 @@ export function Home() {
                 {
                     Object.keys(meals).map(category =>
                         <Section type={category} key={category}>
-                            { meals[category].map(meal => <Card key={String(meal.id)} data={meal} />) }
+                            {meals[category].map(meal => <Card key={String(meal.id)} data={meal} />)}
                         </Section>
                     )
                 }

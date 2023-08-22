@@ -32,7 +32,9 @@ Pode selecionar pratos, categorizados antecipadamente;
 
 ## Layout
 
-![Badge](https://img.shields.io/badge/Figma-Food_explorer-%237159c1?style=for-the-badge&logo=ghost) [Clique aqui para ver o preview no Figma](https://www.figma.com/file/GkqG5AUJe3ppcUEHfvOX6z/food-explorer?type=design&mode=dev)
+![Badge](https://img.shields.io/badge/Figma-Food_explorer-%237159c1?style=for-the-badge&logo=ghost) 
+
+[Clique aqui para ver o preview no Figma](https://www.figma.com/file/GkqG5AUJe3ppcUEHfvOX6z/food-explorer?type=design&mode=dev)
 
 
 

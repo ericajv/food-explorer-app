@@ -43,7 +43,7 @@ export function Edit() {
 
         if (confirm) {
             await api.delete(`/meals/${data.id}`)
-            navigate(0)
+            navigate("/")
         }
     }
 
